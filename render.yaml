@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: revolt-backend
+    env: docker
+    plan: free
+    region: frankfurt
+    branch: main
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DOMAIN
+        value: api.diablo.rip
+      - key: PORT
+        value: 8000
+      - key: EMAIL
+        value: admin@diablo.rip
+      - key: REGISTRATION_ENABLED
+        value: true
+      - key: SEND_EMAIL
+        value: false
